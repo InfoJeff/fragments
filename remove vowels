@@ -1,0 +1,29 @@
+//text that will be converted to later have vowels removed
+let input = 'This long sentence needs to have no vowels';
+
+//an array of vowels that we look for in input string
+let vowels = ['a', 'e', 'i', 'o', 'u'];
+
+//array to store only non-vowels
+let output = [];
+
+//logic that compares the input variable's text to the vowels array. The goal is to remove all the vowels in the input string.
+
+for (let inputIndex = 0; inputIndex< input.length; inputIndex++){
+
+ // put the current character from input string into output string
+ output.push(input[inputIndex]);
+
+ for (let vowelsIndex=0; vowelsIndex<vowels.length; vowelsIndex++){
+
+   //comparing the input letter to every letter in the vowels array. Pushing the characters from input that are vowels to the resultArray.
+   
+	if (input[inputIndex] === vowels[vowelsIndex]){
+      // take out the last character if it is a vowel
+      output.pop();
+   }
+ }
+ }
+
+//printing the resulting string
+console.log(output.join('').toLowerCase());
